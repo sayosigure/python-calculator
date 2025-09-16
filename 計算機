@@ -1,12 +1,24 @@
-# calculator.py
-while True:
-    a = int(input("1つ目の数字を入れてください: "))
-    b = int(input("2つ目の数字を入れてください: "))
-    print("足し算:", a + b)
-    print("引き算:", a - b)
-    print("掛け算:", a * b)
-    print("割り算:", a / b)
+import streamlit as st
 
-    cont = input("続けますか？(y/n): ")
-    if cont.lower() != "y":
-        break
+st.title("🧮 シンプル電卓")
+
+# 入力
+a = st.number_input("1つ目の数字を入力してください", value=0)
+b = st.number_input("2つ目の数字を入力してください", value=0)
+
+# 演算子を選択
+op = st.selectbox("演算子を選んでください", ["+", "-", "*", "/"])
+
+# 計算ボタン
+if st.button("計算する"):
+    if op == "+":
+        st.write("結果:", a + b)
+    elif op == "-":
+        st.write("結果:", a - b)
+    elif op == "*":
+        st.write("結果:", a * b)
+    elif op == "/":
+        if b != 0:
+            st.write("結果:", a / b)
+        else:
+            st.write("⚠️ 0では割れません")
