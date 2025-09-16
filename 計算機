@@ -1,0 +1,12 @@
+# calculator.py
+while True:
+    a = int(input("1つ目の数字を入れてください: "))
+    b = int(input("2つ目の数字を入れてください: "))
+    print("足し算:", a + b)
+    print("引き算:", a - b)
+    print("掛け算:", a * b)
+    print("割り算:", a / b)
+
+    cont = input("続けますか？(y/n): ")
+    if cont.lower() != "y":
+        break
