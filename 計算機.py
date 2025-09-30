@@ -1,3 +1,5 @@
+import streamlit as st
+
 number1=int(input("1つめ"))
 number2=int(input("2つめ"))
 hugou=input("四則演算")
