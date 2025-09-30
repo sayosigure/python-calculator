@@ -1,4 +1,4 @@
-import streamlit as st
+import streamlit
 
 number1=int(input("1つめ"))
 number2=int(input("2つめ"))
