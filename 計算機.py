@@ -6,10 +6,10 @@ hugou=input("四則演算")
 if hugou=="+":
     print(number1+number2)
 elif hugou=="-":
-        print(number1-number2)
+    print(number1-number2)
 elif hugou=="*":
-        print(number1*number2)
+    print(number1*number2)
 elif hugou=="/":
-        print(number1/number2)
+    print(number1/number2)
 else:
     print("条件の見直し")
